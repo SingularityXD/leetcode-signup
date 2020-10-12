@@ -17,3 +17,18 @@ const intersection = (num1, num2) => {
         }
       )
     }
+
+    const intersection = function(nums1, nums2) {
+        const map = new Map()
+        nums1.forEach(item=>{
+            map.set(item,true)
+        })
+        const ret = []
+        nums2.forEach(item=>{
+            if(map.get(item)){
+                ret.push(item)
+                map.delete(item)
+            }
+        })
+        return ret
+    };
