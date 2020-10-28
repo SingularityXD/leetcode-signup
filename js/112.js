@@ -18,11 +18,7 @@ const levelOrder = function(root) {
         const l = []
         while(len--){
       const h = q.shift()
-      if(h){
         l.push(h.val)
-      }else{
-          l.push([])
-      }
         if(h.left) q.push(h.left)
         if(h.right) q.push(h.right)
         }
